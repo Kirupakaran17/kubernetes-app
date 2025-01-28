@@ -26,7 +26,7 @@ jobs:
         run: |
           # Get the short commit SHA for tagging
           COMMIT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
-          docker build -t kirupa1799/githubacton:$COMMIT_SHA ./Dockerfile
+          docker build -t kirupa1799/githubacton:$COMMIT_SHA .
 
       - name: Push Docker image
         run: |
